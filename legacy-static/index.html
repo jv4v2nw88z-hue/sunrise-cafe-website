@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunrise Cafe — Breakfast &amp; Lunch in Battle Creek, MI</title>
+  <meta name="description" content="Award-winning breakfast and lunch in Battle Creek, MI. Open Mon &amp; Wed–Sun 6AM–2PM at 117 E Coolidge Ave. Omelets, waffles, burgers, catering &amp; more.">
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Sunrise Cafe — Breakfast &amp; Lunch in Battle Creek, MI">
+  <meta property="og:description" content="Award-winning breakfast and lunch in Battle Creek, MI. Open Mon &amp; Wed–Sun 6AM–2PM.">
+  <!-- OWNER: Replace og:image with a great food photo URL -->
+  <meta property="og:image" content="images/og-hero.jpg">
+  <meta property="og:url" content="https://www.sunrisecafebattlecreek.com/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.sunrisecafebattlecreek.com/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- LocalBusiness / Restaurant Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Sunrise Cafe",
+    "image": "https://www.sunrisecafebattlecreek.com/images/og-hero.jpg",
+    "url": "https://www.sunrisecafebattlecreek.com/",
+    "telephone": "(269) 965-1606",
+    "email": "hamiltonhort@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "117 E Coolidge Ave",
+      "addressLocality": "Battle Creek",
+      "addressRegion": "MI",
+      "postalCode": "49017",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.3211,
+      "longitude": -85.1797
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday",    "opens": "06:00", "closes": "14:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "06:00", "closes": "14:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday",  "opens": "06:00", "closes": "14:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday",    "opens": "06:00", "closes": "14:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday",  "opens": "06:00", "closes": "14:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday",    "opens": "06:00", "closes": "14:00" }
+    ],
+    "servesCuisine": ["American", "Breakfast", "Lunch"],
+    "priceRange": "$",
+    "hasMap": "https://maps.google.com/?q=117+E+Coolidge+Ave,+Battle+Creek,+MI+49017",
+    "award": "People's Choice Winner and Loaded Category Winner — Battle Creek Mac & Cheese Festival 'The Big Cheese' 2023",
+    "sameAs": [
+      "https://www.facebook.com/sunrisecafebattlecreek"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="site-header" role="banner">
+  <div class="container header-inner">
+    <a href="index.html" class="site-logo" aria-label="Sunrise Cafe — Home">
+      <div class="logo-icon" aria-hidden="true">☀️</div>
+      <div class="logo-text">
+        <strong>Sunrise Cafe</strong>
+        <span>Battle Creek, MI</span>
+      </div>
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="catering.html">Catering</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://maps.google.com/?q=117+E+Coolidge+Ave,+Battle+Creek,+MI+49017" class="btn btn-nav" target="_blank" rel="noopener" aria-label="Get directions to Sunrise Cafe">📍 Directions</a>
+      <a href="tel:+12699651606" class="btn btn-secondary" style="color:#fff;border-color:rgba(255,255,255,.4)" aria-label="Call Sunrise Cafe">(269) 965-1606</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile nav -->
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="catering.html">Catering</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-actions">
+    <a href="tel:+12699651606" class="btn btn-primary">📞 Call Us</a>
+    <a href="https://maps.google.com/?q=117+E+Coolidge+Ave,+Battle+Creek,+MI+49017" class="btn btn-outline" target="_blank" rel="noopener">📍 Directions</a>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-label="Welcome">
+    <div class="hero-bg">
+      <!--
+        OWNER: Replace the src below with a great food photo
+        (loaded skillet, stack of waffles, character pancake, etc.).
+        Recommended size: 1600×900px, compressed to ~200 KB.
+      -->
+      <img src="images/hero-food.jpg" alt="A loaded breakfast skillet from Sunrise Cafe" loading="eager">
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-award fade-up">
+          🏆 People's Choice Winner — Battle Creek Mac &amp; Cheese Festival 2023
+        </div>
+        <h1 class="fade-up fade-up-1">Make the Most Important Meal of the Day a Good One.</h1>
+        <p class="fade-up fade-up-2">Battle Creek's award-winning breakfast &amp; lunch — cooked fresh, served warm, and worth the drive.</p>
+        <div class="hero-ctas fade-up fade-up-3">
+          <a href="tel:+12699651606" class="btn btn-primary">📞 Call (269) 965-1606</a>
+          <a href="https://maps.google.com/?q=117+E+Coolidge+Ave,+Battle+Creek,+MI+49017" class="btn btn-secondary" target="_blank" rel="noopener">📍 Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AWARD BANNER ===== -->
+  <div class="award-banner" role="complementary" aria-label="Award recognition">
+    <div class="container">
+      <div class="award-banner-inner">
+        <div class="award-trophy" aria-hidden="true">🏆</div>
+        <div class="award-text">
+          <strong>People's Choice Winner &amp; "Loaded" Category Winner</strong>
+          <span>Battle Creek Mac &amp; Cheese Festival "The Big Cheese" 2023 · White Cheddar Mac with Brisket Burnt Ends</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WELCOME ===== -->
+  <section class="welcome" aria-labelledby="welcome-heading">
+    <div class="container">
+      <div class="welcome-grid">
+        <div class="welcome-image">
+          <!--
+            OWNER: Replace with a warm, inviting photo of the dining room
+            or a signature dish. Size: 800×600px.
+          -->
+          <div class="img-placeholder">
+            <span class="placeholder-icon">🍳</span>
+            <span>Add a dining room or signature dish photo here</span>
+          </div>
+        </div>
+        <div class="welcome-text">
+          <span class="section-label">Welcome to Sunrise Cafe</span>
+          <h2 class="section-title" id="welcome-heading">A Real Breakfast Worth Getting Up For</h2>
+          <p>We're a neighborhood spot in Battle Creek doing breakfast and lunch the right way — fresh eggs, hand-cut meats, homemade French toast, and an omelet for every craving. Whether you're a regular who knows your order by heart or a first-timer looking for the best breakfast in town, you'll feel at home here.</p>
+          <p style="margin-top:.9rem">Drop in any morning (except Tuesday — we rest) and let us take care of you. Open 6AM to 2PM, six days a week.</p>
+          <div style="margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap">
+            <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+            <a href="catering.html" class="btn btn-outline">Catering Info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== QUICK LINKS ===== -->
+  <section class="quick-links" aria-labelledby="explore-heading">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Explore</span>
+        <h2 class="section-title" id="explore-heading">What We're Known For</h2>
+      </div>
+      <div class="cards-grid" style="margin-top:2rem">
+
+        <a href="menu.html" class="card">
+          <div class="card-image">
+            <!-- OWNER: Replace with a great food photo (waffles, pancakes, omelet). 640×360px -->
+            <div class="img-placeholder" style="aspect-ratio:16/9"><span class="placeholder-icon">🧇</span><span>Breakfast menu photo</span></div>
+          </div>
+          <div class="card-body">
+            <h3>Full Breakfast &amp; Lunch Menu</h3>
+            <p>Omelets, skillets, waffles, burgers, sandwiches, and award-winning mac &amp; cheese. Something for everyone.</p>
+            <span class="card-link">See the Menu</span>
+          </div>
+        </a>
+
+        <a href="catering.html" class="card">
+          <div class="card-image">
+            <!-- OWNER: Replace with a catering spread photo. 640×360px -->
+            <div class="img-placeholder" style="aspect-ratio:16/9"><span class="placeholder-icon">🍽️</span><span>Catering spread photo</span></div>
+          </div>
+          <div class="card-body">
+            <h3>Office Catering</h3>
+            <p>Down-home cooking delivered to your office in Battle Creek &amp; Hastings. Full setup and cleanup included.</p>
+            <span class="card-link">Learn More</span>
+          </div>
+        </a>
+
+        <a href="gallery.html" class="card">
+          <div class="card-image">
+            <!-- OWNER: Replace with a gallery teaser / collage photo. 640×360px -->
+            <div class="img-placeholder" style="aspect-ratio:16/9"><span class="placeholder-icon">📸</span><span>Gallery teaser photo</span></div>
+          </div>
+          <div class="card-body">
+            <h3>Photo Gallery</h3>
+            <p>Take a look at the food, the atmosphere, and the people who make Sunrise Cafe what it is.</p>
+            <span class="card-link">View Gallery</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOURS & MAP ===== -->
+  <section class="info-section" aria-labelledby="hours-heading">
+    <div class="container">
+      <div class="text-center" style="margin-bottom:2rem">
+        <span class="section-label">Visit Us</span>
+        <h2 class="section-title" id="hours-heading">Hours &amp; Location</h2>
+      </div>
+      <div class="info-grid">
+        <div>
+          <div class="hours-card">
+            <h3>⏰ Hours</h3>
+            <div class="hours-list" role="list">
+              <div class="hours-row" data-day="mon" role="listitem"><span class="day">Monday</span><span class="time">6:00 AM – 2:00 PM</span></div>
+              <div class="hours-row closed" data-day="tue" role="listitem"><span class="day">Tuesday</span><span class="time">Closed</span></div>
+              <div class="hours-row" data-day="wed" role="listitem"><span class="day">Wednesday</span><span class="time">6:00 AM – 2:00 PM</span></div>
+              <div class="hours-row" data-day="thu" role="listitem"><span class="day">Thursday</span><span class="time">6:00 AM – 2:00 PM</span></div>
+              <div class="hours-row" data-day="fri" role="listitem"><span class="day">Friday</span><span class="time">6:00 AM – 2:00 PM</span></div>
+              <div class="hours-row" data-day="sat" role="listitem"><span class="day">Saturday</span><span class="time">6:00 AM – 2:00 PM</span></div>
+              <div class="hours-row" data-day="sun" role="listitem"><span class="day">Sunday</span><span class="time">6:00 AM – 2:00 PM</span></div>
+            </div>
+            <div class="address-block">
+              <a href="https://maps.google.com/?q=117+E+Coolidge+Ave,+Battle+Creek,+MI+49017" target="_blank" rel="noopener">
+                <span class="icon">📍</span> 117 E Coolidge Ave, Battle Creek, MI 49017
+              </a>
+              <a href="tel:+12699651606">
+                <span class="icon">📞</span> (269) 965-1606
+              </a>
+              <a href="mailto:hamiltonhort@gmail.com">
+                <span class="icon">✉️</span> hamiltonhort@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-embed">
+          <iframe
+            title="Sunrise Cafe location on Google Maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2959.7!2d-85.1797!3d42.3211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s117+E+Coolidge+Ave%2C+Battle+Creek%2C+MI+49017!5e0!3m2!1sen!2sus!4v1"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="reviews" aria-labelledby="reviews-heading">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label" style="color:var(--orange-light)">What Guests Are Saying</span>
+        <h2 class="section-title" id="reviews-heading">People Love Sunrise Cafe</h2>
+        <p class="section-intro">Don't take our word for it — here's what our regulars have to say.</p>
+      </div>
+      <!--
+        OWNER: Replace these 3 cards with real quotes from your Google Business Profile,
+        or embed a Google Reviews widget (e.g. via Elfsight or EmbedSocial).
+        Keep the same card structure — just update the text, names, and initials.
+      -->
+      <div class="reviews-grid">
+
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-text">"Best breakfast spot in Battle Creek, hands down. The Hangover Skillet is absolutely wild — in the best possible way. We come every Saturday without fail."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" aria-hidden="true">MJ</div>
+            <div>
+              <div class="reviewer-name">M. Johnson</div>
+              <div class="reviewer-source">Google Review</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-text">"The white cheddar mac with brisket burnt ends won Best in Show for a reason — it's ridiculous. Worth every bite. Staff is always friendly and the coffee never runs out."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" aria-hidden="true">SR</div>
+            <div>
+              <div class="reviewer-name">S. Rodriguez</div>
+              <div class="reviewer-source">Google Review</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-text">"Catered our office lunch and it was a hit. Everything was fresh, hot, and the cleanup was spotless. Easiest decision we've made. Will absolutely book again."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" aria-hidden="true">TK</div>
+            <div>
+              <div class="reviewer-name">T. Kowalski</div>
+              <div class="reviewer-source">Google Review</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div class="reviews-cta">
+        <!-- OWNER: Replace with your actual Google Business Profile review link -->
+        <a href="https://g.page/r/YOUR_GOOGLE_PLACE_ID/review" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.4)" target="_blank" rel="noopener">⭐ Leave Us a Google Review</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BIG SAMMY CHALLENGE ===== -->
+  <section class="challenge" aria-labelledby="challenge-heading">
+    <div class="container">
+      <div class="challenge-inner">
+        <div class="challenge-content">
+          <span class="section-label" style="color:rgba(255,255,255,.7)">Think You Can Handle It?</span>
+          <h2 id="challenge-heading">Take On the Big Sammy Challenge</h2>
+          <p>The Big Sammy is the legendary Hangover Skillet — times four. Hash browns, eggs, cheese, your choice of meat, sandwiched between pancakes and crowned with sausage gravy. It feeds four, and it does not mess around.</p>
+          <div class="challenge-rules">
+            <ul>
+              <li>4× Hangover Skillet stacked sky-high</li>
+              <li>Topped with sausage gravy</li>
+              <li>Serves 4 hungry challengers</li>
+              <li>Finish it all → FREE Sunrise Cafe T-Shirt</li>
+            </ul>
+          </div>
+          <a href="menu.html#breakfast" class="btn btn-secondary">See the Full Menu</a>
+        </div>
+        <div class="challenge-image">
+          <!--
+            OWNER: Replace with a dramatic photo of the Big Sammy Challenge dish.
+            This is your best social-media hook — make it look epic. 800×600px.
+          -->
+          <div class="img-placeholder" style="min-height:300px;background:rgba(0,0,0,.2);color:rgba(255,255,255,.6)">
+            <span class="placeholder-icon">🔥</span>
+            <span>Add Big Sammy Challenge photo here</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer id="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo" aria-label="Sunrise Cafe home">
+          <div class="logo-icon" aria-hidden="true">☀️</div>
+          <div class="logo-text">
+            <strong>Sunrise Cafe</strong>
+            <span>Battle Creek, MI</span>
+          </div>
+        </a>
+        <p class="footer-tagline">Make the most important meal of the day a good one.</p>
+        <div class="footer-social">
+          <!-- OWNER: Update href to your actual Facebook page URL -->
+          <a href="https://www.facebook.com/sunrisecafebattlecreek" class="social-link" target="_blank" rel="noopener" aria-label="Sunrise Cafe on Facebook">f</a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h4>Get In Touch</h4>
+        <div class="footer-contact-list">
+          <div class="footer-contact-item">
+            <span class="icon" aria-hidden="true">📍</span>
+            <address style="font-style:normal">117 E Coolidge Ave<br>Battle Creek, MI 49017</address>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon" aria-hidden="true">📞</span>
+            <a href="tel:+12699651606">(269) 965-1606</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon" aria-hidden="true">✉️</span>
+            <a href="mailto:hamiltonhort@gmail.com">hamiltonhort@gmail.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="icon" aria-hidden="true">⏰</span>
+            <span>Mon &amp; Wed–Sun: 6AM–2PM<br>Tuesday: Closed</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span class="copyright-year"></span> Sunrise Cafe · 117 E Coolidge Ave, Battle Creek, MI 49017</p>
+      <p>
+        <a href="tel:+12699651606">(269) 965-1606</a> ·
+        <a href="https://maps.google.com/?q=117+E+Coolidge+Ave,+Battle+Creek,+MI+49017" target="_blank" rel="noopener">Directions</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
