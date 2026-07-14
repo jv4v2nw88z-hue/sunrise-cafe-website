@@ -18,57 +18,48 @@ export function Section({
   )
 }
 
+/**
+ * Editorial section header, left-aligned by default.
+ * `animate` is opt-in: scroll reveals are reserved for a few key moments,
+ * not sprayed across every section.
+ */
 export function SectionHeading({
   id,
   eyebrow,
   title,
   intro,
-  align = 'center',
   tone = 'light',
+  animate = false,
 }: {
   id: string
   eyebrow: string
   title: string
   intro?: string
-  align?: 'center' | 'left'
   tone?: 'light' | 'dark'
+  animate?: boolean
 }) {
-  const alignCls = align === 'center' ? 'text-center mx-auto' : 'text-left'
-  return (
-    <motion.div
-      variants={stagger(0.12)}
-      initial={ENTRANCE}
-      whileInView="visible"
-      viewport={viewportOnce}
-      className={`max-w-2xl ${alignCls}`}
-    >
-      <motion.p
-        variants={fadeUp}
-        className={`text-sm font-bold uppercase tracking-[0.18em] ${
-          tone === 'dark' ? 'text-honey-400' : 'text-sunrise-600'
-        }`}
-      >
-        {eyebrow}
-      </motion.p>
-      <motion.h2
-        variants={fadeUp}
+  const eyebrowCls = tone === 'dark' ? 'text-yolk' : ''
+  const titleCls = tone === 'dark' ? 'text-paper' : 'text-ink'
+  const introCls = tone === 'dark' ? 'text-paper/75' : 'text-umber'
+
+  const inner = (
+    <>
+      <p className={`eyebrow ${eyebrowCls}`}>{eyebrow}</p>
+      <h2
         id={`${id}-heading`}
-        className={`mt-3 font-display text-3xl font-semibold leading-tight sm:text-4xl lg:text-[2.75rem] ${
-          tone === 'dark' ? 'text-cream-50' : 'text-espresso-800'
-        }`}
+        className={`mt-3 max-w-[16ch] font-display text-4xl font-extrabold leading-[1.02] tracking-tight sm:text-5xl lg:text-6xl ${titleCls}`}
       >
         {title}
-      </motion.h2>
-      {intro && (
-        <motion.p
-          variants={fadeUp}
-          className={`mt-4 text-base leading-relaxed sm:text-lg ${
-            tone === 'dark' ? 'text-cream-200/80' : 'text-espresso-600'
-          }`}
-        >
-          {intro}
-        </motion.p>
-      )}
+      </h2>
+      {intro && <p className={`mt-5 max-w-xl text-base leading-relaxed sm:text-lg ${introCls}`}>{intro}</p>}
+    </>
+  )
+
+  if (!animate) return <div>{inner}</div>
+
+  return (
+    <motion.div variants={stagger(0.12)} initial={ENTRANCE} whileInView="visible" viewport={viewportOnce}>
+      <motion.div variants={fadeUp}>{inner}</motion.div>
     </motion.div>
   )
 }

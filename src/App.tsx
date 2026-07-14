@@ -1,6 +1,7 @@
 import { MotionConfig } from 'framer-motion'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import HoursStrip from './components/HoursStrip'
 import MenuSection from './components/MenuSection'
 import Catering from './components/Catering'
 import Gallery from './components/Gallery'
@@ -14,6 +15,7 @@ export default function App() {
       <Nav />
       <main id="main">
         <Hero />
+        <HoursStrip />
         <MenuSection />
         <Catering />
         <Gallery />
