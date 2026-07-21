@@ -10,10 +10,10 @@ function todayLabel(): string {
 }
 
 /**
- * Full-bleed dawn-griddle scene. To swap in a real dish photo, replace this
- * component's inner markup with:
- *   <img src="/hero.jpg" alt="" className="h-full w-full object-cover" />
- * and keep the duotone overlay + grain divs below it.
+ * Full-bleed looping video of an egg cooking on the griddle. Falls back to
+ * the poster image (no video load/playback) when the user prefers reduced
+ * motion. To swap in a different clip, replace /public/hero.mp4,
+ * /public/hero.webm and /public/hero-poster.jpg and keep the same names.
  */
 function HeroBackdrop() {
   const reduceMotion = useReducedMotion()
@@ -29,7 +29,7 @@ function HeroBackdrop() {
         transition={{ duration: 2.2, ease: EASE }}
         className="absolute inset-[-12%]"
       >
-        {/* Dawn light: one warm glow rising from the lower left. */}
+        {/* Dawn light backdrop: color-matches the video while it loads. */}
         <div
           className="absolute inset-0"
           style={{
@@ -40,60 +40,21 @@ function HeroBackdrop() {
           }}
         />
 
-        {/* Cast-iron skillet with a sunny-side-up egg, cropped off the right edge. */}
-        <svg
-          viewBox="0 0 800 800"
-          className="absolute -right-[16%] top-1/2 h-[125%] w-auto -translate-y-[44%] sm:-right-[6%] lg:right-[2%]"
-        >
-          <defs>
-            <radialGradient id="panIron" cx="42%" cy="38%" r="75%">
-              <stop offset="0%" stopColor="#3A2417" />
-              <stop offset="55%" stopColor="#241410" />
-              <stop offset="100%" stopColor="#150C08" />
-            </radialGradient>
-            <radialGradient id="yolkGrad" cx="40%" cy="35%" r="80%">
-              <stop offset="0%" stopColor="#FFCB4E" />
-              <stop offset="60%" stopColor="#F3A712" />
-              <stop offset="100%" stopColor="#C97F04" />
-            </radialGradient>
-          </defs>
-
-          {/* pan handle */}
-          <rect x="30" y="368" width="190" height="52" rx="26" fill="#170E09" />
-          <rect x="30" y="368" width="190" height="10" rx="5" fill="#4A2F1D" opacity="0.5" />
-
-          {/* pan body */}
-          <circle cx="470" cy="400" r="300" fill="url(#panIron)" />
-          <circle cx="470" cy="400" r="300" fill="none" stroke="#5E4530" strokeOpacity="0.55" strokeWidth="4" />
-          <circle cx="470" cy="400" r="252" fill="#1B0F0A" />
-          <circle cx="470" cy="400" r="252" fill="none" stroke="#000000" strokeOpacity="0.4" strokeWidth="10" />
-
-          {/* egg white — irregular, spread on the iron */}
-          <path
-            d="M470 212c74-14 166 22 196 92 24 56 8 118-30 158 30 26 38 74 12 108-30 40-92 48-140 34-38 26-96 30-138 6-52-30-70-92-50-142-34-34-42-92-14-134 32-48 102-38 164-122z"
-            fill="#F7EFDF"
-            opacity="0.96"
-          />
-          <path
-            d="M470 212c74-14 166 22 196 92 24 56 8 118-30 158"
-            fill="none"
-            stroke="#E7D9BF"
-            strokeWidth="6"
-            opacity="0.6"
-          />
-
-          {/* yolk */}
-          <circle cx="478" cy="392" r="86" fill="url(#yolkGrad)" />
-          <ellipse cx="450" cy="362" rx="30" ry="20" fill="#FFE9A8" opacity="0.85" />
-        </svg>
-
-        {/* steam wisps */}
-        <svg viewBox="0 0 400 600" className="absolute right-[8%] top-[4%] h-[55%] w-auto opacity-25 sm:right-[18%]">
-          <g fill="none" stroke="#F7EFDF" strokeWidth="7" strokeLinecap="round">
-            <path d="M120 560 C 90 480, 160 430, 128 350 C 100 280, 150 230, 132 160" />
-            <path d="M230 580 C 260 490, 195 445, 226 360 C 252 290, 205 240, 224 150" />
-          </g>
-        </svg>
+        {reduceMotion ? (
+          <img src="/hero-poster.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" />
+        ) : (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/hero-poster.jpg"
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src="/hero.webm" type="video/webm" />
+            <source src="/hero.mp4" type="video/mp4" />
+          </video>
+        )}
       </motion.div>
 
       {/* Duotone overlay: keeps overlaid text legible, left side darkest. */}
